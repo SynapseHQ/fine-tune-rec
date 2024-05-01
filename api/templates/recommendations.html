@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>llm-rec</title>
+</head>
+<body class="w-full h-full">
+    <h1 class="w-full h-full bg-gray-800 text-neutral-200 text-4xl text-center p-10">
+        LLM Rec
+    </h1>
+
+    <div class="w-screen h-full flex flex-wrap items-center justify-center p-4 md:p-10">
+        {% for item in posts %}
+            <div class="card bg-gray-800 text-white rounded overflow-hidden w-64 h-64 m-2 p-4">
+                <h2 class="card-title text-xl font-bold">{{ item.title }}</h2>
+                <p class="card-abstract mt-2 text-sm text-neutral-100">{{ item.abstract }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- add some empty space -->
+    <div class="h-40">
+    </div>
+</body>
+</html>

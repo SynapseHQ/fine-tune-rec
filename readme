@@ -1,0 +1,10 @@
+download and install MINDsmall train and validation set in ./data and ./api/data
+
+conda create --name rec-llm --file spec-file.txt
+
+conda activate rec-llm
+
+cd ./api
+
+uvicorn main:app
+
